@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
+<!-- saved from url=(0086)file:///Users/naufalramadan/Documents/GitHub/simple-html-invoice-template/invoice.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
 		<title>A simple, clean, and responsive HTML invoice template</title>
 
 		<style>
@@ -102,54 +102,54 @@
 	<body>
 		<div class="invoice-box">
 			<table cellpadding="0" cellspacing="0">
-				<tr class="top">
+				<tbody><tr class="top">
 					<td colspan="2">
 						<table>
-							<tr>
+							<tbody><tr>
 								<td class="title">
-									<img src="https://www.sparksuite.com/images/logo.png" style="width: 100%; max-width: 300px" />
+									<img src="./invoice_files/logo.png" style="width: 100%; max-width: 300px">
 								</td>
 
 								<td>
-									Invoice #: 123<br />
-									Created: January 1, 2015<br />
-									Due: February 1, 2015
+									Invoice #: {{invoice_number}}<br>
+									Created: {{created_date}}<br>
+									Due: {{due_date}}
 								</td>
 							</tr>
-						</table>
+						</tbody></table>
 					</td>
 				</tr>
 
 				<tr class="information">
 					<td colspan="2">
 						<table>
-							<tr>
+							<tbody><tr>
 								<td>
-									Sparksuite, Inc.<br />
-									12345 Sunny Road<br />
-									Sunnyville, CA 12345
+									{{address_line_1}}<br>
+									{{address_line_2}}<br>
+									{{address_line_3}}
 								</td>
 
 								<td>
-									Acme Corp.<br />
-									John Doe<br />
-									john@example.com
+									{{company_name}}<br>
+									{{contact_person}}<br>
+									{{contact_email}}
 								</td>
 							</tr>
-						</table>
+						</tbody></table>
 					</td>
 				</tr>
 
 				<tr class="heading">
 					<td>Payment Method</td>
 
-					<td>Check #</td>
+					<td>#</td>
 				</tr>
 
 				<tr class="details">
-					<td>Check</td>
+					<td>{{payment_method}}</td>
 
-					<td>1000</td>
+					<td>{{payment_code}}</td>
 				</tr>
 
 				<tr class="heading">
@@ -159,29 +159,19 @@
 				</tr>
 
 				<tr class="item">
-					<td>Website design</td>
+					<td>{{item_1}}</td>
 
-					<td>$300.00</td>
+					<td>{{currency}}{{item_price}}</td>
 				</tr>
 
-				<tr class="item">
-					<td>Hosting (3 months)</td>
-
-					<td>$75.00</td>
-				</tr>
-
-				<tr class="item last">
-					<td>Domain name (1 year)</td>
-
-					<td>$10.00</td>
-				</tr>
 
 				<tr class="total">
 					<td></td>
 
-					<td>Total: $385.00</td>
+					<td>{{currency}}{{total_price}}</td>
 				</tr>
-			</table>
+			</tbody></table>
 		</div>
-	</body>
-</html>
+	
+
+</body></html>
